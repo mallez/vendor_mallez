@@ -1,7 +1,6 @@
 
 # copied from repo git://github.com/ExtinctionLevelEvent/vendor_event_ele.git
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.tags=release-keys \
     windowsmgr.max_events_per_sec=512 \
     ro.kernel.android.checkjni=0 \
     ro.media.enc.jpeg.quality=100 \
@@ -9,19 +8,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.performance.tuning=1 \
     persist.service.swiqi.enable=1 \
     video.accelerate.hw=1 \
-    ro.ril.enable.3g.prefix=1 \
-    ro.ril.hep=1 \
-    ro.ril.enable.dtm=1 \
-    ro.ril.hsdpa.category=28 \
-    ro.ril.enable.a53=1 \
-    ro.ril.enable.3g.prefix=1 \
-    ro.ril.hsupa.category=7 \
     persist.sys.purgeable_assets=1 \
     pm.sleep_mode=1 \
     ro.home_app_adj=1 \
     ro.ext4fs=1 \
     persist.sys.use_dithering=0 \
-    ro.ril.disable.power.collapse=0 \
     dalvik.vm.execution-mode=int:jit \
     dalvik.vm.verify-bytecode=false \
     dalvik.vm.dexopt-flags=m=y,v=n,o=v \
@@ -37,10 +28,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/event/mallez/prebuilt/system/etc/init.d/01mallez:system/etc/init.d/01mallez \
-    vendor/event/mallez/prebuilt/system/etc/init.d/91mallezzipalign:system/etc/init.d/91mallezzialign \
-    vendor/event/mallez/prebuilt/system/etc/init.d/05mallezfs:system/etc/init.d/05mallezfs \
-    vendor/event/mallez/prebuilt/system/etc/init.d/99mallezsystem:system/etc/init.d/99mallezsystem
+    vendor/mallez/prebuilt/system/etc/init.d/01mallez:system/etc/init.d/01mallez \
+    vendor/mallez/prebuilt/system/etc/init.d/91mallezzipalign:system/etc/init.d/91mallezzialign \
+    vendor/mallez/prebuilt/system/etc/init.d/05mallezfs:system/etc/init.d/05mallezfs \
+    vendor/mallez/prebuilt/system/etc/init.d/99mallezsystem:system/etc/init.d/99mallezsystem
 
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapstartsize=128m \
@@ -58,10 +49,11 @@ PRODUCT_COPY_FILES += \
 
 # extras
 PRODUCT_COPY_FILES += \
-    vendor/event/ele/prebuilt/system/xbin/zipalign:system/xbin/zipalign \
-    vendor/event/ele/prebuilt/system/xbin/sqlite3:system/xbin/sqlite3
+    vendor/mallez/prebuilt/system/xbin/zipalign:system/xbin/zipalign \
+    vendor/mallez/prebuilt/system/xbin/sqlite3:system/xbin/sqlite3
+    vendor/mallez/prebuilt/system/app/com.teslacoilsw.launcher.apk:system/app/Nova.apk
 
-# Bootanimation ele
+# Bootanimation 
 PRODUCT_COPY_FILES += \
     vendor/mallez/prebuilt/system/media/bootanimation.zip:system/media/bootanimation.zip
 
